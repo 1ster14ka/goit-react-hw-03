@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import ContactList from "./components/ContactList/ContactList";
 import SearchBox from "./components/SearchBox/SearchBox";
@@ -24,7 +22,6 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("Contacts", JSON.stringify(contact));
-    console.log(JSON.parse(localStorage.getItem("Contacts")));
   }, [contact]);
 
   const addContact = (newContact) => {
